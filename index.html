@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Flip Book Demo</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Script -->
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <input type="checkbox" id="cover_checkbox" />
+    <input type="checkbox" id="page1_checkbox" />
+    <input type="checkbox" id="page2_checkbox" />
+    <input type="checkbox" id="page3_checkbox" />
+    <input type="checkbox" id="page4_checkbox" />
+    <input type="checkbox" id="page5_checkbox" />
+
+    <!-- Flip Book -->
+    <div id="flip_book">
+      <div class="front_cover">
+        <label for="cover_checkbox" id="cover"></label>
+        <h1>Portada</h1>
+      </div>
+
+      <div class="page" id="page1">
+        <div class="front_page">
+          <label for="page1_checkbox"></label>
+          <h1>Page 1</h1>
+        </div>
+
+        <div class="back_page">
+          <label for="page1_checkbox"></label>
+          <h1>Page 2</h1>
+        </div>
+      </div>
+
+      <div class="page" id="page2">
+        <div class="front_page">
+          <label for="page2_checkbox"></label>
+          <h1>Page 3</h1>
+        </div>
+
+        <div class="back_page">
+          <label for="page2_checkbox"></label>
+          <h1>Page 4</h1>
+        </div>
+      </div>
+
+      <div class="page" id="page3">
+        <div class="front_page">
+          <label for="page3_checkbox"></label>
+          <h1>Page 5</h1>
+        </div>
+
+        <div class="back_page">
+          <label for="page3_checkbox"></label>
+          <h1>Page 6</h1>
+        </div>
+      </div>
+
+      <div class="page" id="page4">
+        <div class="front_page">
+          <label for="page4_checkbox"></label>
+          <h1>Page 7</h1>
+        </div>
+
+        <div class="back_page">
+          <label for="page4_checkbox"></label>
+          <h1>Page 8</h1>
+        </div>
+      </div>
+
+      <div class="page" id="page5">
+        <div class="front_page">
+          <label for="page5_checkbox"></label>
+          <h1>Page 9</h1>
+        </div>
+
+        <div class="back_page">
+          <label for="page5_checkbox"></label>
+          <h1>Page 10</h1>
+        </div>
+      </div>
+
+      <div class="back_cover">
+        <h1>ContraPortada</h1>
+      </div>
+    </div>
+  </main>
+
+  <script>
+
+  </script>
+</body>
+
+</html>
