@@ -14,6 +14,8 @@
 
   --light-color: rgb(245, 245, 245);
   --light-hover: rgba(0, 0, 0, 0.1);
+
+  --cover-color: #F7F3E0;
 }
 
 /* GENERAL */
@@ -50,8 +52,8 @@ input {
 
 /* FLIP BOOK */
 #flip_book {
-  width: 298px;
-  height: 420px;
+  width: 500px;
+  height: 650px;
   position: relative;
   transition-duration: 1s;
   perspective: 2000px;
@@ -66,20 +68,22 @@ input {
   justify-content: center;
   align-items: center;
   border-radius: 2.5px 5px 5px 2.5px;
-  background-image: url(./assets/images/flip_book_edge_shading.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgb(220, 20, 60);
-  box-shadow: 0 0 5px 0 rgb(25, 25, 25, 0.25);
+  background-color: var(--cover-color);
+  box-shadow: 0 4px 10px 0 rgb(82 82 82 / 49%);
 }
 
 .front_cover {
   position: absolute;
   cursor: pointer;
   transform-origin: center left;
-  transition: transform 0.5s;
+  transition: transform 1s;
   z-index: 99;
+  background-size: 93% 95%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .front_cover label {
@@ -90,8 +94,8 @@ input {
 }
 
 .page {
-  width: 288px;
-  height: 400px;
+  width: 95%;
+  height: 96%;
   position: absolute;
   top: 10px;
   left: 1px;
@@ -100,7 +104,11 @@ input {
   transform-origin: left;
   transform-style: preserve-3d;
   transform: rotateY(0deg);
-  transition-duration: 0.5s;
+  transition-duration: 1s;
+  box-shadow: inset 0 0px 10px 5px rgb(255 255 255 / 40%),
+    30px 0px 30px 0px rgb(213 211 211 / 50%) inset,
+    2px 2px 4px 0px rgb(98 98 98 / 50%);
+  border: 1px solid #e2e2e2;
 }
 
 .front_page {
@@ -195,13 +203,13 @@ input {
 }
 
 #cover_checkbox:checked~#flip_book {
-  transform: translateX(144px);
+  transform: translateX(50%);
 }
 
 #cover_checkbox:checked~#flip_book .front_cover {
   transform: rotateY(-180deg);
   transition:
-    transform 1.5s,
+    transform 1s,
     z-index 0.5s 0.5s;
   z-index: 1;
 }
